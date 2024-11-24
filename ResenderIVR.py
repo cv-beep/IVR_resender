@@ -15,7 +15,7 @@ def read_root(NUMBER: str,
     answ = callIVR(NUMBER,ID,NAME)
     return {"data": answ}
     
-def callIVR(NUMBER,ID:int=0,NAME):
+def callIVR(NUMBER,ID:int=0,NAME=None):
     print('start call:', NUMBER,ID)
     session = requests.Session()
     session.auth = (IVR_login, IVR_psw)
