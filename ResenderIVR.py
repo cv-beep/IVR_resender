@@ -21,7 +21,7 @@ def callIVR(NUMBER,ID:int=0,NAME=None):
     session.auth = (IVR_login, IVR_psw)
     call_data = {
         "method":IVR_method,
-        "data":{"NUMBER":NUMBER,"ID":ID,"NAME":NAME}
+        "data":{"number":NUMBER,"ID":ID,"NAME":NAME}
     }
     answ = session.post(IVR_address,json=call_data)
     answ.close()
